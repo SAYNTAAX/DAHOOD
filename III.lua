@@ -69,3 +69,10 @@ else
 
     setclipboard("https://www.roblox.com/groups/12271076/h-e-l-l-s-t-a-r-s#!/about")
 end
+
+local AFK = game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+AFK:CaptureController()
+AFK:ClickButton2(Vector2.new())
+end)
+print("go!")
